@@ -1,0 +1,17 @@
+img{
+    width: 650px;
+    height: 400px;
+
+}
+.intro{
+    color: aqua;
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+}
+#ten{
+    font-weight: bold;
+}
+.hinh{
+    text-align: center;
+}
