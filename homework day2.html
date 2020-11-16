@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+
+<body>
+    <button onclick="baitap1()">Bai 1 : Chuyen doi so vua nhap</button>
+    <button onclick="check_Palindrome()">Bai 2 : Check chu palindrome</button>
+    <button onclick="kiemtra_songuyento()">Bai 8 : Kiem tra so nguyen to</button>
+    <button onclick="kiem_tra_so_chia_het()">Bai 13 : Kiem tra so chia het</button>
+    <script>
+        let n = prompt("số cần đảo ngược") + ""
+        console.log(n)
+        let baitap1 = function () {
+            let result = n.split("").reverse().join("")
+            console.log(result)
+        }
+        let chu_Palindrome = prompt("nhap chu can check")
+        function check_Palindrome() {
+            let change_str = chu_Palindrome.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "")
+            let check_count = 0
+            if (change_str === "") {
+                console.log("khong co gi")
+                return false
+            }
+            if ((change_str) % 2 === 0) {
+                check_count = change_str.length / 2
+            } else {
+                if (change_str === 1) {
+                    console.log("chu nay la Palindrome.")
+                    return true
+                } else {
+                    check_count = change_str - 1 / 2
+                }
+                for (let i = 0; i < check_count; i++)
+                    if (change_str[i] != change_str.slice(-1 - i)[0]) {
+                        console.log("chu nay khong phai la Palindrome.");
+                        return false
+                    }
+            }
+            console.log("chu nay la Palindrome")
+            return true
+        }
+        let so_can_check = prompt("số nguyên tố cần kiểm tra")
+        function kiemtra_songuyento() {
+            if (so_can_check === 1) {
+                console.log("khong phai so nguyen to")
+            }
+            else {
+                if (so_can_check === 2) {
+                    console.log("la so nguyen to")
+
+                } else {
+                    for (let i = 2; i < so_can_check; i++)
+                        if (so_can_check % i === 0) {
+                            console.log("khong phai la so nguyen to")
+                        }
+                }
+            }
+        }
+        //bai 9
+        function check_gt(m) {
+            let kieu_dulieu = [Function, RegExp, Number, String, Boolean, Object], x
+            if (typeof m === "object" || typeof m === "function") {
+                for (i = 0; i < kieu_dulieu.length; i++) {
+                    if (gt_can_check instanceof kieu_dulieu[i]) {
+                        return kieu_dulieu[i]
+                    }
+                }
+            }
+            return typeof m
+        }
+
+        console.log(check_gt(42134242))
+        console.log(check_gt("truong"))
+        console.log(check_gt(true))
+        function kiem_tra_so_chia_het(z) {
+            let bang_so = [], i
+            for (i = 1; i <= Math.floor(Math.sqrt(z)); i += 1)
+                if (z % i === 0) {
+                    bang_so.push(i); if (z / i !== i) {
+                        bang_so.push(z / i)
+                    }
+                }
+            bang_so.sort(function (x, y) {
+                return x - y;
+            })
+            return bang_so
+            
+        }
+        console.log(kiem_tra_so_chia_het(60))
+    </script>
+</body>
+
+</html>
