@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 1</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 10px;
+        }
+    </style>
 </head>
-<body>
-    <h1 class="intro">Hi</h1>
-    <h2 class="intro">Word</h2>
-    <p id="ten">tantruong</p>
-    <a href="https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg"> Hinh quang canh</a>
-    <div class="hinh"><img src="https://cdn2.wanderlust.co.uk/media/1028/cropped-shutterstock_497799013.jpg?anchor=center&mode=crop&width=1200&height=0&rnd=131915974290000000" alt="Hinh canh dep"></div>
-<script>
-let n = prompt() //nhap so n
-let somu = prompt()
-let total = Math.pow(n,somu)
-console.log(total)
-//let S = 0 ; //khai bao tong = 0
-//let sum = function(n){for(let i = 0 ; i<= n ; i++){ S += i }
-//console.log(S)
-//}
-//sum (n)
 
-</script>
+<body id="nothing">
+    <div id="Todolist" style="display: none">
+        <ul id="list"></ul>
+    </div>
+    <form onsubmit="themvieclam()">
+        <p>Them viec can lam o duoi</p>
+        <input type="text" id="box">
+        <input type="submit" value="Submit">
+    </form>
+    <!-- <button onclick="pushvieclam()">Push viec lam</button> -->
+    <button onclick="printtodolist()" style="margin-top:10px;">Print to do list</button>
+    <div><button onclick="titleCase()">Change Character</button></div>
+    <div id="cautraloi">Câu trả lời : </div>
+    <div><button onclick="result()">Mau cua ban</button></div>
+    <script src="blabla.js"></script>
 </body>
 </html>
