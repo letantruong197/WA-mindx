@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body id="nothing">
@@ -16,56 +20,11 @@
         <input type="text" id="box">
         <input type="submit" value="Submit">
     </form>
+    <!-- <button onclick="pushvieclam()">Push viec lam</button> -->
     <button onclick="printtodolist()" style="margin-top:10px;">Print to do list</button>
-    <!-- <h1 id="first">Day la the dau tien</h1>
-    <h2 id="second">day la the thu 2</h2> -->
-    <!-- <input id ="onhapviec" value="nhap viec can lam" onclick=""></input> -->
-    <!-- <input type="submit" value="them viec can lam"> -->
-    <script>
-        let vieccanlam = ["lap trang web", "DI CHOI", "DI HOC"]
-        for (let i = 0; i < vieccanlam.length; i++) {
-            let list = document.getElementById("list")
-            let todojob1tag = document.createElement("li")
-            todojob1tag.innerHTML = vieccanlam[i]
-            list.appendChild(todojob1tag)
-        }
-        function themvieclam() {
-            let inputvalue = document.getElementById("box").value
-            vieccanlam.push(inputvalue)
-            // vieccanlam += vieccanlam.push(inputvalue)
-            console.log(vieccanlam)
-        }
-        console.log(vieccanlam)
-        let a = document.getElementById("Todolist")
-        a = false
-        function printtodolist() {
-            if (a) {
-                document.getElementById("Todolist").style.display = "none"
-                a = false
-            } else {
-                document.getElementById("Todolist").style.display = "block"
-                a = true
-            }
-        }
-        // let body = document.getElementById("nothing");
-        // let todojob1 = document.getElementById("Todolist")
-        // todojob1.innerHTML += "lap trinh web"
-        // let body2 = document.getElementById("nothing");
-        // let todojob2 = document.getElementById("Todolist")
-        // todojob2.innerHTML += "<h2>choi game</h2>"
-        // let body3 = document.getElementById("nothing");
-        // let todojob3 = document.getElementById("Todolist")
-        // todojob3.innerHTML += "<h1>hoc</h1>"
-        // let h1 = "<h1>day la the h1 duoc them vao</h1>";
-        // body.innerHTML += h1;
-        // // let h2 = "<h2>the h2 duoc them vao </h2>"
-        // // body.innerHTML += h2
-        // let newh1 = document.createElement("h1")
-        // newh1.innerHTML = "day la 1 h1 duoc them vao";
-        // body1.remove(second)
-        // body3.appendChild(todojob3)
-        // let Todolist = true
-    </script>
+    <div><button onclick="titleCase()">Change Character</button></div>
+    <div id="cautraloi">Câu trả lời : </div>
+    <div><button onclick="result()">Mau cua ban</button></div>
+    <script src="blabla.js"></script>
 </body>
-
 </html>
